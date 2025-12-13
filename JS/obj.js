@@ -1,0 +1,12 @@
+obj={
+    name:"Pavithra",
+    age:18,
+    city:"Coimbatore"
+}
+console.log(obj);
+obj1={
+    "name":"Pavithra",
+    "age":18,
+    "city":"Coimbatore"
+}
+console.log(obj1);
