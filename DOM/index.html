@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--(1)<p id="msg">Hello</p>
+    <p class="item">One</p>
+    <p class="item">Two</p>
+    -->
+
+    <!--<(2)p id="msg"></p>
+    <button id="submit">Show Message</button>
+    -->
+
+    <!--<(3)ul id = 'list'></ul>-->
+
+    <!--(4)<button id = 'submit' onclick = "Submitted()">click</button>-->
+
+    <!--(5)<p id="name"></p>
+    <input type="text" id="inp" placeholder="Enter the name">
+    <button id="submit">Submit</button>-->
+
+    <!--(6)<p id="num">0</p>
+    <button id="inc">Increament</button>
+    <button id="dec">Decreament</button>
+    <button id="reset">Reset</button>-->
+
+    <!--(7)<h3>Rock Paper Scissor</h3>
+    <button onclick="getRes('rock')">Rock</button>
+    <button onclick="getRes('paper')">Paper</button>
+    <button onclick="getRes('scissor')">Scissor</button>
+    <p id="result"></p>-->
+
+    <!-- (8)<button id="toggle" onclick="toggle()">toggle</button> -->
+
+    <!-- (9)<p id="title">Hello World!!</p>
+    <button id="toggle" onclick="buttonClicked()">toggle</button> -->
+
+    <!-- (10)<p id="text">Hello World !!</p>
+    <button onclick="increaseSize()" >Font Size</button> -->
+
+    <!-- (11)<p id="msg">Hello World !!</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button> -->
+
+    <script>
+        
+        // (1)//id
+        // document.getElementById('msg').style.color='Red';
+
+        // (1)//class
+        // var item = document.getElementsByClassName('item');
+        // item[0].style.color='Green';
+
+        // (1)//query selector
+        // document.querySelector('#msg').style.backgroundColor='pink' 
+        // document.querySelector('.list').style.backgroundColor='yellow' 
+        // document.querySelector('p').style.backgroundColor='blue' 
+
+        // (2)document.getElementById("submit").addEventListener("click",()=>{
+        //     document.getElementById("msg").innerHTML="HelloWorld!!"
+        // })
+
+        // (3)//creating list
+        // var li = document.createElement('li')
+        // li.innerText = 'One'
+        // document.getElementById("list").append(li);
+
+
+        // (4)//alret
+        // var Submitted = () => {
+        //     alert("Hi")
+        // }
+        
+        // (5)// Display name
+        // document.getElementById("submit").addEventListener("click", ()=>{
+        //     var text = document.getElementById("inp").value;
+        //     document.getElementById("name").innerText=text;
+        // })
+
+        // (6)//increament decrement
+        // var count=0;
+        // document.getElementById("inc").addEventListener("click", ()=>{
+        //     count+=1;
+        //     document.getElementById("num").innerText=count;
+        // })
+        // document.getElementById("dec").addEventListener("click", ()=>{
+        //     count-=1;
+        //     document.getElementById("num").innerText=count;
+        // })
+        // document.getElementById("reset").addEventListener("click", ()=>{
+        //     count=0;
+        //     document.getElementById("num").innerText=count;
+        // })
+
+        // (7)const getRes = (userChoice) => {
+        //     var choice = ['rock', 'paper', 'scissor']
+        //     var computerChoice = choice[Math.floor(Math.random()*3)]
+        //     console.log(computerChoice);
+        //     var result="";
+        //     if(userChoice===computerChoice) result="Draw 😑"
+        //     else if(userChoice==="rock" && computerChoice==="paper" || userChoice==="paper" && computerChoice==="scissor" || userChoice==="scissor" && computerChoice==="rock") result="loss 😭"
+        //     else result="Won 😄"
+        //     document.getElementById("result").innerText=result
+        // }
+
+        // (8)// Toggle Background Color
+        // var toggle = () => {
+        //     var color = ['red', 'blue', 'green', 'pink', 'orange', 'yellow'];
+        //     var ind = Math.floor(Math.random() * color.length);
+        //     document.body.style.backgroundColor = color[ind];
+        // }
+
+        // (9)// Toggle name-change
+        // var buttonClicked = () => {
+        // var title = document.getElementById('title');
+        // var result = title.innerText==="Hello World!!" ? "Hello Pavii !!" : "Hello World!!"
+        // title.innerText = result;
+        // }
+
+        // (10)// Font size increaser
+        // let size=12;
+        // function increaseSize(){
+        //     size+=2;
+        //     document.getElementById("text").style.fontSize = size+"px";
+        // }
+        
+
+        // (11)// Hide and Show Msg
+        // document.getElementById("msg").style.fontSize = '30px'
+        // document.getElementById('hide').addEventListener('click', () => {
+        //     document.getElementById('msg').style.display='none';
+        // })
+        // document.getElementById('show').addEventListener('click', () => {
+        //     document.getElementById('msg').style.display='block';
+        // })
+
+    </script>
+</body>
+</html>

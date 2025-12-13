@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>HTML Form</h3>
+    <form id="myform"> 
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="age">Age :</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <label>Gender:</label><br>
+        
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="sec" value="male"><br>
+
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="sec" value="female"><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br><br><br>
+
+        <button type="submit">Submit</button>
+        
+    </form>
+
+    <script>
+
+        document.getElementById('myform').addEventListener('submit', ()=>{
+            const name=document.getElementById("name").value;
+            const age=document.getElementById("age").value;
+            const email=document.getElementById("email").value;
+            
+            let selected = document.querySelector('input[name="sec"]:checked');
+            let gender = selected ? selected.value : "Not selected";
+
+
+            console.log(`Name : ${name}`)
+            console.log(`Age : ${age}`)
+            console.log(`Gender : ${gender}`)
+            console.log(`Email : ${email}`)
+
+            alert("Form submitted successfully !!")
+        })
+
+        
+    </script>
+</body>
+</html>
