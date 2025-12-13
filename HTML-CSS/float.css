@@ -1,0 +1,14 @@
+.float-left{
+    float: left;
+    margin: 1px;
+}
+
+.float-right{
+    float: right;
+    margin: 1px;
+}
+
+.float-inherit{
+    float: none;
+    margin: 1px;
+}
