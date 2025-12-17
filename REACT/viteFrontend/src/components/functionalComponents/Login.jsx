@@ -14,6 +14,13 @@ const Login = () => {
     e.preventDefault();
     setError("");
     
+    // Demo login for testing
+    if (email === "test@test.com" && password === "test") {
+      login({ email: "test@test.com", username: "Test User" });
+      navigate('/learn-react');
+      return;
+    }
+    
     try {
       const response = await axios.post('http://localhost:8001/login', { email, password });
       if (response.data.isLoggedIn) {
@@ -23,13 +30,15 @@ const Login = () => {
         setError(response.data.Message || "Login failed");
       }
     } catch (error) {
-      setError(error.response?.data?.Message || "Login failed. Please check your credentials or sign up.");
+      console.log('Backend error:', error);
+      setError("Backend not connected. Use test@test.com / test for demo or start backend server.");
     }
   };
 
   return (
     <div style={{padding: '2rem'}}>
       <h2>Login</h2>
+      <p style={{color: '#666', fontSize: '0.9rem'}}>Demo: test@test.com / test (or use your registered account)</p>
       {error && <p style={{color: 'red'}}>{error}</p>}
       <form onSubmit={handleLogin}>
         <input 

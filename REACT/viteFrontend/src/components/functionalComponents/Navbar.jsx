@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import '../../css/Navbar.css';
 
@@ -7,6 +7,12 @@ function Navbar() {
     const [learningDropdown, setLearningDropdown] = useState(false);
     const [hooksDropdown, setHooksDropdown] = useState(false);
     const { isLoggedIn, logout } = useAuth();
+    const navigate = useNavigate();
+    
+    const handleLogout = () => {
+        logout();
+        navigate('/login');
+    };
 
     return (
         <header className="navbar">
@@ -31,7 +37,7 @@ function Navbar() {
                                         onMouseEnter={() => setHooksDropdown(true)}
                                         onMouseLeave={() => setHooksDropdown(false)}
                                     >
-                                        <span>Hooks</span>
+                                        <span><Link>Hooks</Link></span>
                                         {hooksDropdown && (
                                             <ol className="dropdown-list-nested">
                                                 <li><Link to="/use-state">UseState</Link></li>
@@ -51,7 +57,7 @@ function Navbar() {
 
                     <li><Link to="/con">Contact</Link></li>
                     {isLoggedIn ? (
-                        <li><button onClick={logout} style={{background: 'none', border: 'none', color: 'white', cursor: 'pointer'}}>Logout</button></li>
+                        <li><button onClick={handleLogout} style={{background: 'none', border: 'none', color: 'white', cursor: 'pointer'}}>Logout</button></li>
                     ) : (
                         <li><Link to="/login">Login</Link></li>
                     )}
