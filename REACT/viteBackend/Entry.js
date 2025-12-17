@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const signup = require("./models/SignupSchema");
 const cors = require("cors");
 const app = express();
-const port = 8001;
+const port = process.env.PORT || 8001;
 
 // Middleware to parse JSON body
 app.use(express.json());
@@ -12,7 +12,8 @@ app.use(cors());
 
 
 // Connect to MongoDB
-mdb.connect('mongodb://localhost:27017/MERN')
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/MERN';
+mdb.connect(mongoURI)
   .then(() => console.log("MongoDB connection successful"))
   .catch((err) => console.log("MongoDB connection unsuccessful", err));
 
