@@ -16,7 +16,7 @@ const Signup = () => {
     setSuccess("");
     
     try {
-      const response = await axios.post('http://localhost:8001/signup', { username, email, password });
+      const response = await axios.post('https://classroom-project-pavithra-m2007.onrender.com', { username, email, password });
       setSuccess(response.data.Message);
       setTimeout(() => navigate('/login'), 2000);
     } catch (error) {

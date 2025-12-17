@@ -22,7 +22,7 @@ const Login = () => {
     }
     
     try {
-      const response = await axios.post('http://localhost:8001/login', { email, password });
+      const response = await axios.post('https://classroom-project-pavithra-m2007.onrender.com', { email, password });
       if (response.data.isLoggedIn) {
         login(response.data.user);
         navigate('/learn-react');
